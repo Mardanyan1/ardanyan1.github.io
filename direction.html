@@ -1,0 +1,414 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Факультеты и направления</title>
+        <link rel="stylesheet" type="text/css" href="css.css">
+        <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+        <style>
+        
+
+            .resp-tab td, .resp-tab th 
+            {
+                text-align: center;
+                padding: 8px;
+                font-size: 15px;
+                border:none;
+                font-family: Verdana, sans-serif;
+            }
+            .resp-tab td 
+            {
+                font-size: 13px;
+                border-right: 1px solid #E6E4E4;
+            }
+            .resp-tab th 
+            {
+                color: #ffffff;
+                background: #2d6b9f;
+            }
+            .resp-tab th:nth-child(odd)
+            {
+                background: #337AB7;
+            }
+            .resp-tab tr:nth-child(even) 
+            {
+                background: #F8F8F8;
+            }
+            @media (max-width: 920px) 
+            {
+                .resp-tab 
+                {
+                    display: block;
+                    margin:2.5%;
+                    width: 95%;
+                    white-space: nowrap;/*весь текст отображается одной строкой*/
+                }
+                .resp-tab thead, 
+                .resp-tab tbody, 
+                .resp-tab thead th 
+                {
+                    display: block;
+                }
+                .resp-tab thead 
+                {
+                    float: left;
+                }
+                .resp-tab tbody 
+                {
+                    width: auto;
+                    position: relative;
+                    overflow-x: auto;
+                }
+                .resp-tab td
+                {
+                    text-align: left;
+                    padding: 10px 2px;
+                    box-sizing: border-box;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    width: 230px;
+                    font-size: 13px;
+                    text-overflow: ellipsis;
+                }
+                 .resp-tab th 
+                {
+                    padding: 10px 2px;
+                    box-sizing: border-box;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    width: 160px;
+                    font-size: 13px;
+                    text-overflow: ellipsis;/*многоточие если не помещается текст*/
+                }
+                .resp-tab tbody tr 
+                {
+                    display: table-cell;
+
+                }
+                .resp-tab tr:nth-child(even)
+                {
+                    background: transparent;
+                }
+                .resp-tab tr td:nth-child(odd) 
+                {
+                    background: #F8F8F8;
+                    border-right: 1px solid #E6E4E4;
+                }
+                .resp-tab td 
+                {
+                    display: block;
+                    text-align: center;
+                }
+               
+            }
+        </style>
+</head>
+<body>
+<div id="container">
+    <div id="header" align="center">
+       <p><img src="emblema.png" width=20% height=20% align="middle">
+	   <strong>Московский государственный институт радиотехники, электроники и автоматики (технический университет)</strong>
+       </p>
+	</div>
+    
+    <div id="navigation" align="center">
+        <nav align="center" style="font-size: 130%">
+            <a style="text-decoration:none" href="index.html">История МИРЭА</a>|
+            |<a style="text-decoration:none" href="map.html">Здание и карта</a>|
+            |<a style="text-decoration:none" href="direction.html">Факультеты и направления</a>|
+            |<a style="text-decoration:none" href="mraspisanie.html">Расписание</a>|
+            |<a style="text-decoration:none" href="army.html">Военная кафедра</a>
+        </nav>
+	</div>
+    
+    <div id="content">
+	   <h2 align="center">Направления подготовки/специальности</h2>
+        <div align="center">
+          <input type="text" placeholder="Поиск" id="search-text" onkeyup="tableSearch()" align="center"></div>
+<table class="resp-tab" class="table table-striped" id="info-table" align="center" border="1" width="85%" style="border-collapse:collapse;">
+    <thead border="1" bgcolor="#A9A9A9">
+        <tr>
+            <th>Специальность</th>
+            <th>Место и <br>форма обучения</th>
+            <th><br>Вступительные <br><br>испытания</th>
+            <th>Бюджетных мест в 2021 году</th>
+            <th>Проходной балл в 2020 году</th>
+        </tr>
+    </thead>
+    <tbody bgcolor="#D3D3D3" align="center">
+        <tr>
+            <td>Прикладная математика и информатика</td>
+            <td>Москва, Институт кибернетики<br>Бакалавриат</td>
+            <td>
+            <ol>
+                <li>Математика(проф.)</li>
+                <li>Информатика и ИКТ</li>
+                <li>Русский язык</li>
+                </ol>
+            </td>
+            <td>60</td>
+            <td>251</td>
+        </tr>
+        <tr>
+            <td>Прикладная математика</td>
+            <td>Москва, Институт информационных технологий<br>Бакалавриат</td>
+            <td>
+            <ol>
+                <li>Математика (проф.)</li>
+                <li>Информатика и ИКТ</li>
+                <li>Русский язык</li>
+                </ol>
+            </td>
+            <td>30</td>
+            <td>246</td>
+        </tr>
+        <tr>
+            <td>Статистика</td>
+            <td>Москва, Институт технологий управления<br>Бакалавриат</td>
+            <td>
+            <ol>
+                <li>Математика(проф.)</li>
+                <li>Информатика и ИКТ</li>
+                <li>Русский язык</li>
+                </ol>
+            </td>
+            <td>32</td>
+            <td>245</td>
+        </tr>
+        <tr>
+            <td>Фундаментальная информатика и информационные технологии</td>
+            <td>Москва, Институт комплексной безопасности и специального приборостроения<br>Бакалавриат</td>
+            <td>
+            <ol>
+                <li>Информатика и ИКТ</li>
+                <li>Математика(проф.)</li>
+                <li>Русский язык</li>
+                </ol>
+            </td>
+            <td>21</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Химия</td>
+            <td>Москва, Институт тонких химических технологий им. М.В. Ломоносова<br>Бакалавриат</td>
+            <td>
+            <ol>
+                <li>Химия</li>
+                <li>Математика (проф.)</li>
+                <li>Русский язык</li>
+                </ol>
+            </td>
+            <td>76</td>
+            <td>242</td>
+        </tr>
+        <tr>
+            <td>Информатика и вычислительная техника</td>
+            <td>Москва, Институт информационных технологий<br>Бакалавриат</td>
+            <td>
+            <ol>
+                <li>Физика или Информатика</li>
+                <li>Математика(проф.)</li>
+                <li>Русский язык</li>
+                </ol>
+            </td>
+            <td>120</td>
+            <td>234</td>
+        </tr>
+        <tr>
+            <td>Информатика и вычислительная техника</td>
+            <td>Москва, Институт кибернетики<br>Бакалавриат</td>
+            <td>
+            <ol>
+                <li>Физика или Информатика</li>
+                <li>Математика(проф.)</li>
+                <li>Русский язык</li>
+                </ol>
+            </td>
+            <td>180</td>
+            <td>236</td>
+        </tr>
+        <tr>
+            <td>Информационные системы и технологии</td>
+            <td>Москва, Институт комплексной безопасности и специального приборостроения<br>Бакалавриат</td>
+            <td>
+            <ol>
+                <li>Информатика и ИКТ</li>
+                <li>Математика (проф.)</li>
+                <li>Русский язык</li>
+                </ol>
+            </td>
+            <td>300</td>
+            <td>244</td>
+        </tr>
+        <tr>
+            <td>Информационные системы и технологии</td>
+            <td>Москва, Институт радиотехнических и телекоммуникационных систем<br>Бакалавриат</td>
+            <td>
+            <ol>
+                <li>Физика или Информатика</li>
+                <li>Математика (проф.)</li>
+                <li>Русский язык</li>
+                </ol>
+            </td>
+            <td>60</td>
+            <td>236</td>
+        </tr>
+        <tr>
+            <td>Информационные системы и технологии</td>
+            <td>Москва, Физико-технологический институт<br>Бакалавриат</td>
+            <td>
+            <ol>
+                <li>Информатика и ИКТ</li>
+                <li>Математика (проф.)</li>
+                <li>Русский язык</li>
+                </ol>
+            </td>
+            <td>60</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Прикладная информатика</td>
+            <td>Москва, Институт информационных технологий<br>Бакалавриат</td>
+            <td>
+            <ol>
+                <li>Информатика и ИКТ</li>
+                <li>Математика (проф.)</li>
+                <li>Русский язык</li>
+                </ol>
+            </td>
+            <td>231</td>
+            <td>248</td>
+        </tr>
+        <tr>
+            <td>Программная инженерия</td>
+            <td>Москва, Институт информационных технологий<br>Бакалавриат</td>
+            <td>
+            <ol>
+                <li>Информатика и ИКТ</li>
+                <li>Математика (проф.)</li>
+                <li>Русский язык</li>
+                </ol>
+            </td>
+            <td>300</td>
+            <td>258</td>
+        </tr>
+        <tr>
+            <td>Информационная безопасность</td>
+            <td>Москва, Институт комплексной безопасности и специального приборостроения<br>Бакалавриат</td>
+            <td>
+            <ol>
+                <li>Математика (проф.)</li>
+                <li>Информатика и ИКТ</li>
+                <li>Русский язык</li>
+                </ol>
+            </td>
+            <td>48</td>
+            <td>245</td>
+        </tr>
+        <tr>
+            <td>Компьютерная безопасность</td>
+            <td>Москва, Институт кибернетики<br>Специалитет</td>
+            <td>
+            <ol>
+                <li>Математика (проф.)</li>
+                <li>Физика ИЛИ Информатика</li>
+                <li>Русский язык</li>
+                </ol>
+            </td>
+            <td>60</td>
+            <td>237</td>
+        </tr>
+        <tr>
+            <td>Информационная безопасность телекоммуникационных систем</td>
+            <td>Москва, Институт кибернетики<br>Специалитет</td>
+            <td>
+            <ol>
+                <li>Математика (проф.)</li>
+                <li>Информатика и ИКТ</li>
+                <li>Русский язык</li>
+                </ol>
+            </td>
+            <td>60</td>
+            <td>241</td>
+        </tr>
+        <tr>
+            <td>Информационная безопасность автоматизированных систем</td>
+            <td>Москва, Институт комплексной безопасности и специального приборостроения<br>Специалитет</td>
+            <td>
+            <ol>
+                <li>Математика (проф.)</li>
+                <li>Информатика и ИКТ</li>
+                <li>Русский язык</li>
+                </ol>
+            </td>
+            <td>60</td>
+            <td>236</td>
+        </tr>
+        <tr>
+            <td>Информационно-аналитические системы безопасности</td>
+            <td>Москва, Институт комплексной безопасности и специального приборостроения<br>Специалитет</td>
+            <td>
+            <ol>
+                <li>Математика (проф.)</li>
+                <li>Информатика и ИКТ</li>
+                <li>Русский язык</li>
+                </ol>
+            </td>
+            <td>39</td>
+            <td>235</td>
+        </tr>
+        <tr>
+            <td>Безопасность информационных технологий в правоохранительной сфере</td>
+            <td>Москва, Институт комплексной безопасности и специального приборостроения<br>Специалитет</td>
+            <td>
+            <ol>
+                <li>Математика (проф.)</li>
+                <li>Информатика и ИКТ</li>
+                <li>Русский язык</li>
+                </ol>
+            </td>
+            <td>39</td>
+            <td>237</td>
+        </tr>
+    </tbody>
+</table>    
+        <p style="text-align: center;">Данные актуальны для абитуриентов, поступающих в 2021 году</p>
+    <script>
+    function tableSearch() {
+    var phrase = document.getElementById('search-text');
+    var table = document.getElementById('info-table');
+    var regPhrase = new RegExp(phrase.value, 'i');
+    var flag = false;
+    for (var i = 1; i < table.rows.length; i++) 
+    {
+        flag = false;
+        for (var j = table.rows[i].cells.length - 1; j >= 0; j--) 
+        {
+            flag = regPhrase.test(table.rows[i].cells[j].innerHTML);
+            if (flag) break;
+        }
+        if (flag)
+        {
+            table.rows[i].style.display = "";
+        } else 
+        {
+            table.rows[i].style.display = "none";
+        }
+
+    }
+}
+    
+    </script>
+	</div>
+	
+						   
+	<div id="footer">
+<br>
+        <p><span style="align:left;"> Ⓒ2020 Марданян Артём ИКБО-20-19</span>
+        <span style="float:right; margin-right:15px;"> +7(895)275-02-18</span>
+        </p>
+        <span style="float:right; margin-right:15px;"><a href="https://vk.com/mirea_official"><img src="vc.png"></a></span>
+        <span style="float:right; margin-right:35px;"><a href="https://www.instagram.com/rtu_university_official/"><img src="inst.png"></a></span>	</div> 
+</div>  
+</body>
+</html>

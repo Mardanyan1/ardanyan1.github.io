@@ -1,0 +1,386 @@
+<!doctype html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <title>Расписание</title>
+        <link rel="stylesheet" type="text/css" href="css.css">
+        <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+        <style>
+            
+            
+            .menu a
+            {
+                text-decoration: none;  
+                color: aliceblue;
+            }
+            .menu li
+            {
+                position: relative;
+                left: 0px;
+                list-style: none;
+            }
+            .menu__list a
+            {
+                background:#337AB7; 
+                color: #fff;
+                /*padding: 10px 5px 10px 5px;*/
+                display: block;
+                border-bottom: 1px solid white;
+            }
+            .menu__list
+            {
+                display: flex;
+                justify-content: space-between;
+            }
+            .menu__list>li
+            {
+                text-overflow: ellipsis;
+                background: #2d6b9f;
+                width: auto;
+                margin:0 10px 200px 0;    
+            }
+            .menu__list>li:hover  .sub-menu__list
+            {
+                display: block;
+            }
+            
+            .menu__list>li:hover  .sub-menu__listt
+            {
+                display: block;
+            }
+               
+            .menu__link
+            {
+                color: #fff;
+            }
+            .sub-menu__list
+            {
+                display: none;
+                position: absolute;
+                left:0px;
+                top:20px;
+                padding:40px 0 0 0; 
+            }
+            
+            .sub-menu__listt
+            {
+                display: none;
+                position: absolute;
+                right:0px;
+                top:20px;
+                padding:40px 0 0 0; 
+            }
+            
+            .sub-menu__list>li
+            {      
+                background-color: #337AB7;
+            }
+            .sub-menu__list>li:hover .sub-sub-menu__list
+            {
+                display: block;
+            }
+            
+            .sub-menu__list>li:hover .sub-sub-menu__listt
+            {
+                display: block;
+            }
+            
+            .sub-menu__listt>li:hover .sub-sub-menu__list
+            {
+                display: block;
+            }
+            
+            .sub-menu__listt>li:hover .sub-sub-menu__listt
+            {
+                display: block;
+            }
+            
+            .sub-menu_link
+            {
+                color: #fff;
+                display: inline-block;
+                border-bottom: 1px solid white;
+                padding: 5px 10px;
+            }
+            .sub-sub-menu__list
+            {
+                display: none;
+                position: absolute;
+                left:100%;
+                top:0px;
+                padding:0 0 0 5px; 
+            }
+            
+            
+            .sub-sub-menu__listt
+            {
+                display: none;
+                position: absolute;
+                right:100%;
+                top:0px;
+                padding:0 5px 0 0; 
+            }
+            .sub-sub-menu__link
+            {
+                display: block;
+                border-bottom: 1px solid white;
+                color: #fff;
+                display: inline-block;
+                padding: 5px;
+            }
+            @media (max-width:567px)
+            {
+                .sub-menu__list
+                {
+                    display: none;
+                    position: absolute;
+                    left:0px;
+                    top:20px;
+                    padding:80px 0 0 0; 
+                }
+                .sub-menu__listt
+                {
+                    display: none;
+                    position: absolute;
+                    right:0px;
+                    top:20px;
+                    padding:80px 0 0 0; 
+                }
+            }
+            
+            @media (max-width:460px)
+            {
+                .menu__list>li
+                {
+                    text-overflow: ellipsis;
+                    background: #2d6b9f;
+                    width: auto;
+                    margin:0 10px 300px 0;
+
+                }  
+            }
+            
+            
+            
+            
+            
+            
+            
+          
+        </style>
+    
+
+    
+</head>
+<body>
+<div id="container">
+    <div id="header" align="center">
+       <p>
+           <img src="emblema.png" width=20% height=20% align="middle">
+	       <strong>Московский государственный институт радиотехники, электроники и автоматики (технический университет)</strong>
+       </p>
+    
+
+	</div>
+    
+    <div id="navigation" align="center">
+        <nav align="center" style="font-size: 130%">
+            <a style="text-decoration:none" href="index.html">История МИРЭА</a>|
+            |<a style="text-decoration:none" href="map.html">Здание и карта</a>|
+            |<a style="text-decoration:none" href="direction.html">Факультеты и направления</a>|
+            |<a style="text-decoration:none" href="mraspisanie.html">Расписание</a>|
+            |<a style="text-decoration:none" href="army.html">Военная кафедра</a>
+        </nav>
+	</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="content">
+	   <h2 align="center">Расписание</h2>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li><a href="" class="menu__link">Первый Курс</a>
+                <ul class="sub-menu__list">
+                    <li><a href="" class="sub-menu__link">Институт информационных технологий</a>
+                        <ul class="sub-sub-menu__list">
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Зачёт</a></li>
+                            <li><a href="" class="sub-sub-menu__link">Экзамен</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Занятия</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="sub-menu__link">Институт кибернетики</a>
+                <ul class="sub-sub-menu__list">
+                            <ul class="sub-sub-menu__list">
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Зачёт</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Экзамен</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Занятия</a></li>
+                        </ul>
+                        </ul>
+                </li>
+                    <li><a href="" class="sub-menu__link">Физико-технологический институт</a>
+                <ul class="sub-sub-menu__list">
+                            <li><a href="https://sheet.zoho.com/sheet/officeapi/v1/dbd16d354362558047b0dc045754369ae1ce26655ec72ddeeb17a5b8261f6e95a07c7afb71f4800991ac1af003d9cfe588286b547bd49ebc1c59084e17bcf21c" target="_blank" class="sub-sub-menu__link">Зачёт</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Экзамен</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Занятия</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="sub-menu__link">Институт комплексной безопасности и специального приборостроения</a>
+                        <ul class="sub-sub-menu__list">
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Зачёт</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Экзамен</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Занятия</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="sub-menu__link">Институт радиотехнических и телекоммуникационных систем</a>
+                        <ul class="sub-sub-menu__list">
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Зачёт</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Экзамен</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Занятия</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            
+              </li>
+            <li><a href="" class="menu__link">Второй Курс</a>
+                <ul class="sub-menu__list">
+                    <li><a href="" class="sub-menu__link">Институт информационных технологий</a>
+                        <ul class="sub-sub-menu__list">
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Зачёт</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Экзамен</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Занятия</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="sub-menu__link">Институт кибернетики</a>
+                        <ul class="sub-sub-menu__list">
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Зачёт</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Экзамен</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Занятия</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="sub-menu__link">Физико-технологический институт</a>
+                        <ul class="sub-sub-menu__list">
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Зачёт</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Экзамен</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Занятия</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="sub-menu__link">Институт комплексной безопасности и специального приборостроения</a>
+                        <ul class="sub-sub-menu__list">
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Зачёт</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Экзамен</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Занятия</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="sub-menu__link">Институт радиотехнических и телекоммуникационных систем</a>
+                        <ul class="sub-sub-menu__list">
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Зачёт</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Экзамен</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Занятия</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="" class="menu__link">Третий Курс</a>
+                <ul class="sub-menu__listt">
+                    <li><a href="" class="sub-menu__link">Институт информационных технологий</a>
+                        <ul class="sub-sub-menu__listt">
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Зачёт</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Экзамен</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Занятия</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="sub-menu__link">Институт кибернетики</a>
+                        <ul class="sub-sub-menu__listt">
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Зачёт</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Экзамен</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Занятия</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="sub-menu__link">Физико-технологический институт</a>
+                        <ul class="sub-sub-menu__listt">
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Зачёт</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Экзамен</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Занятия</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="sub-menu__link">Институт комплексной безопасности и специального приборостроения</a>
+                        <ul class="sub-sub-menu__listt">
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Зачёт</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Экзамен</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Занятия</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="sub-menu__link">Институт радиотехнических и телекоммуникационных систем</a>
+                        <ul class="sub-sub-menu__listt">
+                            <li><a href="https://docviewer.yandex.ru/view/588123173/?*=g2R6C8RqmfbWt3hRzYhGobrk%2FQd7InVybCI6InlhLWJyb3dzZXI6Ly80RFQxdVhFUFJySlJYbFVGb2V3cnVJekR0ZUZXWjFQeEhyUXpLaENlNWRGV3pvcUwweFlNM2NOSGpCUVYzbkpka3RCd1dIbmNQeWMzNTE4WjJsWE5JTVhSeDczalNibzlNYlFPNGVEWHMzZXdIdlF2U0VwaGVnVnRJTXkwU0NmSEJrWXZRUUJaVlBIVUNXdkh2eVBId0E9PT9zaWduPUIyZERaSXNqZ0NrY3FXS3hWRDZmeHVqX3lmMmVrdFVwM1EtQ3d2Zk5DNG89IiwidGl0bGUiOiLQmNCg0KLQoV8z0LpfMjAtMjFf0L7RgdC10L3RjF%2FQt9Cw0YfQtdGCLnhsc3giLCJub2lmcmFtZSI6ZmFsc2UsInVpZCI6IjU4ODEyMzE3MyIsInRzIjoxNjEwOTk4NjE2Njc0LCJ5dSI6IjQ1MDM5OTA3NDE2MDkzMzc0MjYifQ%3D%3D" target="_blank" class="sub-sub-menu__link">Зачёт</a></li>
+                            <li><a href="https://docviewer.yandex.ru/view/588123173/?*=gyLVRGN1%2Fno%2BmtEjxeIMEqlWCg97InVybCI6InlhLWJyb3dzZXI6Ly80RFQxdVhFUFJySlJYbFVGb2V3cnVQbFd6LXVIZlU4cHRlSW5RVjc3dC1YVTU3aVZRdFVLcXRSZ3pJSUhVTmJzeUh0dS1CeEljMnRNbmNGS2tneVJUSkZzYlpFMmVKNlh1OUlPWXQ1bnZJeXZacUlaSlpaZzg3NndEUU5TbTlsZVJkUDBMbzBxNVIyZ2pfNzI5YmlkMmc9PT9zaWduPVBwaHBYQ2R1SU14aVl4eVU0WkNMWEJMa01Xb0ExdWpLdTFiTjc2aWRLb1E9IiwidGl0bGUiOiLQmNCg0KLQoV8z0LpfMjAtMjFf0LfQuNC80LAueGxzeCIsIm5vaWZyYW1lIjpmYWxzZSwidWlkIjoiNTg4MTIzMTczIiwidHMiOjE2MTA5OTg2MTUzNDksInl1IjoiNDUwMzk5MDc0MTYwOTMzNzQyNiJ9" target="_blank" class="sub-sub-menu__link">Экзамен</a></li>
+                            <li><a href="https://docviewer.yandex.ru/view/588123173/?*=8xzmpCoR0ZqLb9tBiH6%2FFjfwCz97InVybCI6InlhLWJyb3dzZXI6Ly80RFQxdVhFUFJySlJYbFVGb2V3cnVFQzlnUEVhZV9QWDlRQ3pEWS13VUVVWEl3TW42MUU1Ry0xN3J5MG5XNFlNM2t0cFBxUmJmRnRLTnFnWk43c1JlS044VDBORjBVcFJpSXpyZHZ0NWdIb1MxVWdBX2dDZ19OTFZzUlRQZ1FXMU1wMEVfTHlKckJ0cmVWSXZtbkZnVkE9PT9zaWduPXFnLTN3Q0VDbmtBdGdIdEk4TGU2Q0s1dHZ1ZWdkSXJ0MTJ3QkRBT1FwQ2s9IiwidGl0bGUiOiLQmNCg0KLQoV8z0LpfMjAtMjFf0L7RgdC10L3RjF%2FRgTEzLjExLjIwMjAueGxzeCIsIm5vaWZyYW1lIjpmYWxzZSwidWlkIjoiNTg4MTIzMTczIiwidHMiOjE2MTA5OTg2MTQ4NzgsInl1IjoiNDUwMzk5MDc0MTYwOTMzNzQyNiJ9" target="_blank" class="sub-sub-menu__link">Занятия</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="" class="menu__link">Четвертый Курс</a><ul class="sub-menu__listt">
+                    <li><a href="" class="sub-menu__link">Институт информационных технологий</a>
+                        <ul class="sub-sub-menu__listt">
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Зачёт</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Экзамен</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Занятия</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="sub-menu__link">Институт кибернетики</a>
+                        <ul class="sub-sub-menu__listt">
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Зачёт</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Экзамен</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Занятия</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="sub-menu__link">Физико-технологический институт</a>
+                        <ul class="sub-sub-menu__listt">
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Зачёт</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Экзамен</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Занятия</a></li>
+                        </ul>
+                    </li>
+                <li><a href="" class="sub-menu__link">Институт комплексной безопасности и специального приборостроения</a>
+                        <ul class="sub-sub-menu__listt">
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Зачёт</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Экзамен</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Занятия</a></li>
+                        </ul>
+                    </li>
+                <li><a href="" class="sub-menu__link">Институт радиотехнических и телекоммуникационных систем</a>
+                        <ul class="sub-sub-menu__listt">
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Зачёт</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Экзамен</a></li>
+                            <li><a href="" target="_blank" class="sub-sub-menu__link">Занятия</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            
+          </ul>
+        
+        </nav>
+        <figure style="text-align: center;"><img style="width: 100%;height: 100%;" src="Group_6.png"></figure>
+	</div>
+		 
+    
+	   
+	<div id="footer">
+<br>
+        <p><span style="align:left;"> Ⓒ2020 Марданян Артём ИКБО-20-19</span>
+        <span style="float:right; margin-right:15px;"> +7(895)275-02-18</span>
+        </p>
+        <span style="float:right; margin-right:15px;"><a href="https://vk.com/mirea_official"><img src="vc.png"></a></span>
+        <span style="float:right; margin-right:35px;"><a href="https://www.instagram.com/rtu_university_official/"><img src="inst.png"></a></span>
+	</div> 
+    
+</div>  
+</body>
+</html>
